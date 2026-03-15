@@ -1,0 +1,50 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-sizeable Tabs</title>
+    <link rel="stylesheet" href="reset.css">
+	<style>
+		.parent-element {
+			display: flex;
+			width: fit-content;
+			height: 500px;
+			background-color: black;
+			overflow: visible
+		}
+
+		.parent-element .child {
+			position: relative;
+			height: 100%;
+			box-shadow: 0 0 0 2px #333 inset;
+			background-color: gray
+		}
+
+		.parent-element .child .resize-bar {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 5px;
+			height: 100%;
+			background-color: purple;
+		}
+	</style>
+
+	<body>
+		<main>
+			<div class="parent-element">
+				<div class="child">
+					<div class="resize-bar"></div>
+				</div>
+
+				<div class="child">
+					<div class="resize-bar"></div>
+				</div>
+
+				<div class="child">
+					<div class="resize-bar"></div>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script src="./index.js"></script>
+</html>
